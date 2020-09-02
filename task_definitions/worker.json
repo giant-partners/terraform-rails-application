@@ -7,13 +7,6 @@
     "essential": true,
     "command": [ "rails", "resque:work" ],
     "environment": ${environment},
-    "healthCheck": {
-      "command": [ "CMD-SHELL", "ps -ef | grep \"resque\" | grep -v grep" ],
-      "interval": 5,
-      "timeout": 2,
-      "retries": 3,
-      "startPeriod": 30
-    },
     "logConfiguration": {
       "logDriver": "awslogs",
       "options": {
@@ -30,13 +23,6 @@
     "essential": true,
     "command": [ "rails", "resque:scheduler" ],
     "environment": ${environment},
-    "healthCheck": {
-      "command": [ "CMD-SHELL", "ps -ef | grep \"resque-scheduler\" | grep -v grep" ],
-      "interval": 5,
-      "timeout": 2,
-      "retries": 3,
-      "startPeriod": 30
-    },
     "logConfiguration": {
       "logDriver": "awslogs",
       "options": {
