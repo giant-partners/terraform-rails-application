@@ -10,6 +10,10 @@ output "worker_service_name" {
   value = aws_ecs_service.worker.name
 }
 
+output "one_off_service_name" {
+  value = aws_ecs_service.one_off.name
+}
+
 output "ecs_cluster" {
   value = aws_ecs_cluster.main
 }
@@ -20,6 +24,10 @@ output "one_off_task_definition_name" {
 
 output "alb" {
   value = aws_alb.main
+}
+
+output "ecs_execution_role" {
+  value = aws_iam_role.ecs_execution_role
 }
 
 output "ecs_task_execution_role" {
